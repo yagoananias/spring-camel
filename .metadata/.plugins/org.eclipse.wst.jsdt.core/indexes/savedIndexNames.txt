@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+D:\BRQ\Apache Camel\apache-camel\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3668801862.index
+2332499510.index
+3974680919.index
+2094503084.index
+3785250482.index

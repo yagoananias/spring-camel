@@ -1,0 +1,32 @@
+package com.brq.camel.controllers;
+
+import java.util.ArrayList;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.brq.camel.models.UsuarioModel;
+
+@RestController
+public class UsuarioController {
+	
+	private ArrayList<UsuarioModel> usuarios = new ArrayList<UsuarioModel>();
+	
+	//construtor chama metodo
+	public UsuarioController() {
+		this.adicionarUsuarios();
+	}
+	
+	@GetMapping(value = "usuarios")
+	public ArrayList<UsuarioModel> get() {
+		
+		return this.usuarios;
+	}
+	
+	//cria um novo usuario e insere no arraylist
+	private void adicionarUsuarios() {
+		UsuarioModel usuario = new UsuarioModel(1, "Yaguim", "yago@teste.com");
+		this.usuarios.add(usuario);
+	}
+
+}

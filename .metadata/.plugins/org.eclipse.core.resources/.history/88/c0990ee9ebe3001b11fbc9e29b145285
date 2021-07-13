@@ -1,0 +1,19 @@
+package com.brq.camel.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.brq.camel.models.UsuarioModel;
+
+@RestController
+public class UsuarioController {
+	
+	@GetMapping(value = "usuarios")
+	public String get() {
+		
+		UsuarioModel usuario = new UsuarioModel(1, "Yaguim", "yago@teste.com");)
+		System.out.println("Rota de usuarios");
+		return "Ueba";
+	}
+
+}
