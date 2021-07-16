@@ -16,6 +16,7 @@
 	<description>Demo project for Spring Boot and Apache Camel</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<camel.version>3.5.0</camel.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -39,6 +40,57 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-spring-boot-starter</artifactId>
+			<version>${camel.version}</version>
+		</dependency>
+
+		<!-- <dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-activemq-starter</artifactId>
+			<version>${camel.version}</version>
+		</dependency> -->
+
+		<!-- <dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-kafka-starter</artifactId>
+			<version>${camel.version}</version>
+		</dependency> -->
+
+		<!-- <dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-crypto-starter</artifactId>
+			<version>${camel.version}</version>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-jackson-starter</artifactId>
+			<version>${camel.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-http-starter</artifactId>
+			<version>${camel.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-csv-starter</artifactId>
+			<version>${camel.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>			
+			<scope>provided</scope>
+		</dependency>
+		
+		
+		
 	</dependencies>
 
 	<build>
