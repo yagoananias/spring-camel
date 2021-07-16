@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class MetaGoRestModel {
 	
-	private PaginationGoRestModel meta;
+	private PaginationGoRestModel pagination;
 
 }
