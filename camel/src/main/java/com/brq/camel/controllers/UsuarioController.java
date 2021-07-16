@@ -38,8 +38,11 @@ public class UsuarioController {
 	
 	//post salva usuario
 	@PostMapping (value = "")
-	public void save(@RequestBody UsuarioModel usuario) {
+	public UsuarioModel save(@RequestBody UsuarioModel usuario) {
+		System.out.print(usuario.getName() + " ");
+		System.out.println(usuario.getEmail());
 		this.usuarios.add(usuario);
+		return usuario;
 	}
 	
 	//edit patch

@@ -47,11 +47,11 @@
 			<version>${camel.version}</version>
 		</dependency>
 
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-activemq-starter</artifactId>
 			<version>${camel.version}</version>
-		</dependency> -->
+		</dependency>
 
 		<!-- <dependency>
 			<groupId>org.apache.camel.springboot</groupId>

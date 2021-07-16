@@ -2,6 +2,8 @@ package com.brq.camel.gorest;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
+import org.springframework.http.HttpEntity;
+import org.springframework.web.client.RestTemplate;
 
 import com.brq.camel.models.ResponseCovidModel;
 import com.brq.camel.models.UsuarioModel;
@@ -16,7 +18,15 @@ public class GoRestProcessor implements Processor {
 		
 		ObjectMapper objectMapper = new ObjectMapper();
 		
-ResponseGoRestModel responseGoRestModel = objectMapper.readValue(input, ResponseGoRestModel.class);
+		ResponseGoRestModel responseGoRestModel = objectMapper.readValue(input, ResponseGoRestModel.class);
+
+		RestTemplate restTemplate = new RestTemplate();
+		
+		for (DataGoRestModel usuario : responseGoRestModel.getData()) {
+			HttpEntity<DataGoRestModel> request = new HttpEntity<DataGoRestModel>(usuario);
+			restTemplate.postForObject("http://localhost:8080/usuarios", request, DataGoRestModel.class);
+		}
+
 		
 	}
 
