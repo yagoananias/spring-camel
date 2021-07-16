@@ -1,15 +1,16 @@
-package com.brq.camel.activemq;
+package com.brq.camel.exercise;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ActiveMqReceiverRouter extends RouteBuilder {
+public class ExerciseReceiverRouter extends RouteBuilder{
 
 	@Override
 	public void configure() throws Exception {
-		from("activemq:my-active-mq")
-		.to("log:my-active-mq-log");
+		
+		from("activemq:exercise")
+		.to("log:my-exercise-log");
 		
 	}
 
