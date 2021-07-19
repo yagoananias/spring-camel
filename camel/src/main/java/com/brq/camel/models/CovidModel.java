@@ -1,6 +1,5 @@
 package com.brq.camel.models;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;

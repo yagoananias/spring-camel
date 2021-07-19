@@ -5,8 +5,6 @@ import org.apache.camel.Processor;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.client.RestTemplate;
 
-import com.brq.camel.models.ResponseCovidModel;
-import com.brq.camel.models.UsuarioModel;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class GoRestProcessor implements Processor {
@@ -23,7 +21,7 @@ public class GoRestProcessor implements Processor {
 		RestTemplate restTemplate = new RestTemplate();
 		
 		for (DataGoRestModel usuario : responseGoRestModel.getData()) {
-			HttpEntity<DataGoRestModel> request = new HttpEntity<DataGoRestModel>(usuario);
+			HttpEntity<DataGoRestModel> request = new HttpEntity<>(usuario);
 			restTemplate.postForObject("http://localhost:8080/usuarios", request, DataGoRestModel.class);
 		}
 

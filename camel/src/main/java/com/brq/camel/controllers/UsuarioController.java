@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.brq.camel.models.UsuarioModel;
@@ -18,9 +17,8 @@ import com.brq.camel.models.UsuarioModel;
 @RequestMapping (value = "usuarios")
 public class UsuarioController {
 	
-	private ArrayList<UsuarioModel> usuarios = new ArrayList<UsuarioModel>();
+	private ArrayList<UsuarioModel> usuarios = new ArrayList<>();
 	
-	//construtor chama metodo
 	public UsuarioController() {
 		this.adicionarUsuarios();
 	}
@@ -30,13 +28,11 @@ public class UsuarioController {
 		return this.usuarios;
 	}
 	
-	//pega o path params
 	@GetMapping(value = "{id}")
 	public UsuarioModel getOne(@PathVariable("id") int id) {
 		return this.usuarios.get(id);
 	}
 	
-	//post salva usuario
 	@PostMapping (value = "")
 	public UsuarioModel save(@RequestBody UsuarioModel usuario) {
 		System.out.print(usuario.getName() + " ");
@@ -45,7 +41,6 @@ public class UsuarioController {
 		return usuario;
 	}
 	
-	//edit patch
 	@PatchMapping(value = "{id}")
 	public UsuarioModel update(
 			@RequestBody UsuarioModel usuario,

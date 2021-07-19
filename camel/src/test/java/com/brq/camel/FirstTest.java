@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class FirstTest {
+class FirstTest {
 	
 	@Test
-	public void firstSucessTest() {
+	void firstSucessTest() {
 		
 		int sum = 5 + 2;
 		int expected = 7;
@@ -18,7 +18,7 @@ public class FirstTest {
 		assertEquals(expected, sum);
 	}
 	@Test
-	public void firstIfExpectedGreatherThanSumTest() {
+	void firstIfExpectedGreatherThanSumTest() {
 		int sum = 5 + 3;
 		int expected = 7;
 		
