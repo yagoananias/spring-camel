@@ -1,13 +1,17 @@
 package com.brq.camel;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
+import org.junit.jupiter.api.Test;
+
 class CamelApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
+	void firstSucessTest() {
+		int sum = 5 + 2;
+		int expected = 7;			
+		
+		assertEquals(expected, sum);
+		}
 
 }

@@ -20,7 +20,7 @@ class FirstTest {
 	@Test
 	void firstIfExpectedGreatherThanSumTest() {
 		int sum = 5 + 3;
-		int expected = 7;
+		int expected = 8;
 		
 		assertTrue(expected > sum);
 	}

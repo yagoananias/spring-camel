@@ -25,9 +25,6 @@ class FileRouterTests extends CamelTestSupport {
 	@Test
 	void checkIfFileExistsInOutputDirectory() throws Exception  {
 		
-		FileRouter fileRouter = this.createRouteBuilder();
-
-		
 		File file = new File("files/output");
 		assertTrue( file.isDirectory() );
 		assertTrue( file.listFiles().length > 0  );
